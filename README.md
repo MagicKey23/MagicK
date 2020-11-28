@@ -1,14 +1,14 @@
 # MagicK
 
 
-#instruction:
+# instruction:
 
 
-###Depend on architect system. You might need to run cc or gcc to compile
+### Depend on architect system. You might need to run cc or gcc to compile
 
 
 
-##WINDOW
+## WINDOW
 
 To compile the code you need to install MINGW
 
@@ -23,7 +23,7 @@ http://www.mingw.org/
 
 
 
-##LINUX and MAC
+## LINUX and MAC
 
 
 1. Install editline library
@@ -62,7 +62,7 @@ The language program using disjunction to create parser for the noun and adjecti
 
 
 
-#How to run the executable file
+# How to run the executable file
 
 PREFERRED WINDOW 
 
