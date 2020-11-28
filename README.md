@@ -16,7 +16,7 @@ http://www.mingw.org/
 
  pick at least mingw32-base and msys-base
  
- Then foolow this instruction:
+ Then follow this instruction:
  
  https://www.computerhope.com/issues/ch000549.htm
 
