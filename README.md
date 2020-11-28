@@ -79,25 +79,25 @@ Example usage:
 |add, sub,mul,mod|  
          
 		 
-**list 1 2 3 4**<=> This would create a list {1 2 3 4}
+`list 1 2 3 4`<=> This would create a list {1 2 3 4}
 
-**eval {head (list 1 2 3 4)}** <=> Grab the first index in the list
+`eval {head (list 1 2 3 4)}` <=> Grab the first index in the list
 
-**eval (tail {tail tail {5 6 7}})** <=> remove first index return last two index in the list
+`eval (tail {tail tail {5 6 7}})` <=> remove first index return last two index in the list
 
-**head {1, 2 ,3}** <=> return the head
+`head {1, 2 ,3}` <=> return the head
 
-**tail {1, 2 ,3 }**<=> return last 2 index, {2,3}
+`tail {1, 2 ,3 }`<=> return last 2 index, {2,3}
 
-**tail (tail {1, 2 ,3}** <=> return last index, {3}
+`tail (tail {1, 2 ,3}` <=> return last index, {3}
 
-**+ 1 2 3** <=> 1 + 2 + 3
+`+ 1 2 3` <=> 1 + 2 + 3
 
-`**+ 1 (\* 7 5) 3** <=> 1 + (7*5) + 3`
+`+ 1 (\* 7 5) 3` <=> 1 + (7*5) + 3
 
-**eval (head {(+ 1 2) (+ 10 20)})** <=> grab the first list perform calculation
+`eval (head {(+ 1 2) (+ 10 20)})` <=> grab the first list perform calculation
 
-**eval (tail {(+ 1 2) (+ 10 20)})** <=> grab the last list perform calculation
+`eval (tail {(+ 1 2) (+ 10 20)})` <=> grab the last list perform calculation
 
 
 SPECIAL THANKS TO DANIEL HOLDEN for create awesome parser combination tool
