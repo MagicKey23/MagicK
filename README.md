@@ -72,10 +72,11 @@ PREFERRED WINDOW
 
 Example usage:
 
-Acceptable symbol you can use:
-list, head, tail, join, eval		         
-+ ,-,*,/,% 											 
-add, sub,mul,mod    
+|Symbol|
+|---------|
+|list, head, tail, join, eval|		         
+|+ ,-,*,/,% | 											 
+|add, sub,mul,mod|  
          
 		 
 list 1 2 3 4 <=> This would create a list {1 2 3 4}
