@@ -93,7 +93,7 @@ Example usage:
 
 **+ 1 2 3** <=> 1 + 2 + 3
 
-**+ 1 (* 7 5) 3** = 1 + (7*5) + 3
+`**+ 1 (\* 7 5) 3** <=> 1 + (7*5) + 3`
 
 **eval (head {(+ 1 2) (+ 10 20)})** <=> grab the first list perform calculation
 
