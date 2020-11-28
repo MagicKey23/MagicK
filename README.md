@@ -54,11 +54,7 @@ run this command for linking
 gcc -std=c99 -Wall prompt_mac_linux.c -ledit -o prompt_mac_linux
 
 
------------
-
-For class:
-
-The language program using disjunction to create parser for the noun and adjection. Later, it use conjunction rule to joined the adjective and noun together to make a phrase.
+----------
 
 
 
