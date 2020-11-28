@@ -99,7 +99,9 @@ Example usage:
 
 `eval (tail {(+ 1 2) (+ 10 20)})` <=> grab the last list perform calculation
 
+`join (list 1 2 3 4) (list 2 3 4)` <=> Join two list together
 INPUT FORMAT:
+
 `<symbol> (<symbol> <double> | <int> )$ <double> <int> ` **$** means optional, **|** or means you can enter either a float or integer value
 
 SPECIAL THANKS TO DANIEL HOLDEN for create awesome parser combination tool
