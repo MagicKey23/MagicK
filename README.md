@@ -95,9 +95,9 @@ Example usage:
 
 **+ 1 (* 7 5) 3** = 1 + (7*5) + 3
 
-** eval (head {(+ 1 2) (+ 10 20)})** <=> grab the first list perform calculation
+**eval (head {(+ 1 2) (+ 10 20)})** <=> grab the first list perform calculation
 
-** eval (tail {(+ 1 2) (+ 10 20)})** <=> grab the last list perform calculation
+**eval (tail {(+ 1 2) (+ 10 20)})** <=> grab the last list perform calculation
 
 
 SPECIAL THANKS TO DANIEL HOLDEN for create awesome parser combination tool
