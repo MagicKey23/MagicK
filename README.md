@@ -89,6 +89,4 @@ tail (tail {1, 2 ,3} <=> return last index, {3}
 eval (head {(+ 1 2) (+ 10 20)}) <=> grab the first list perform calculation
 eval (tail {(+ 1 2) (+ 10 20)}) <=> grab the last list perform calculation
 
-Language format
 
-<symbol> <expr> ()
