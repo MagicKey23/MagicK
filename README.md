@@ -67,7 +67,7 @@ The language program using disjunction to create parser for the noun and adjecti
 PREFERRED WINDOW 
 
 1. OPEN your CMD 
-2. NAVIGATE TO THE FILE DIRECtorY
+2. NAVIGATE TO THE FILE DIRECTORY
 3. type "parse.exe"
 
 Example usage:
