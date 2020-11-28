@@ -89,7 +89,7 @@ Example usage:
 
 `tail {1, 2 ,3 }`<=> return last 2 index, {2,3}
 
-`tail (tail {1, 2 ,3}` <=> return last index, {3}
+`tail (tail {1, 2 ,3})` <=> return last index, {3}
 
 `+ 1 2 3` <=> 1 + 2 + 3
 
@@ -99,6 +99,8 @@ Example usage:
 
 `eval (tail {(+ 1 2) (+ 10 20)})` <=> grab the last list perform calculation
 
+INPUT FORMAT:
+`<symbol> (<symbol> <double> | <int> )$ <double> <int> ` **$** means optional, **|** or means you can enter either a float or integer value
 
 SPECIAL THANKS TO DANIEL HOLDEN for create awesome parser combination tool
 
