@@ -1,3 +1,6 @@
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "mpc.h"
@@ -39,23 +42,27 @@ int main(int argc, char** argv) {
  mpc_parser_t* Double = mpc_new("double");
  mpc_parser_t* Expr = mpc_new("expr");
  mpc_parser_t* Sexpr  = mpc_new("sexpr");
+ mpc_parser_t* Qexpr = mpc_new("qexpr");
  mpc_parser_t* Symbol = mpc_new("symbol");
  mpc_parser_t* MagicK = mpc_new("magicK");
 
 //Set up structure grammar
 
  mpca_lang(MPCA_LANG_DEFAULT,
-	  "                                                   		  					   	\
+	  "                                                   		  					   	 \
 	double	 :	/-?[0-9]+\\.[0-9]+/;   			  		 	 	  						 \
     int      : /-?[0-9]+/;             					 	 							 \
-	sexpr    : '(' <expr>* ')';															\
-	symbol : '+' | '-' | '*' | '/' | '%' | \"add\" | \"sub\" | \"mul\" | \"modus\";    \
-    expr     : <double> | <int> | <symbol> | <sexpr> | ;  						 \
-    magicK   : /^/ <expr>* /$/ ;             	    						  \
+	sexpr    : '(' <expr>* ')';															 \
+	qexpr    : '{' <expr>* '}';															 \
+	symbol   : \"list\" | \"head\" | \"tail\" | \"join\" | \"eval\" 			         \
+			 | '+' | '-'  | '*' | '/' | '%' 											 \
+			 | \"add\" | \"sub\" | \"mul\" | \"mod\";                  				     \
+    expr     : <double> | <int> | <symbol> | <sexpr> | <qexpr>;  						 \
+    magicK   : /^/ <expr>* /$/ ;             	    									 \
   ",
-  Int, Double, Expr, Sexpr, Symbol, MagicK);
+  Int, Double, Expr, Sexpr, Qexpr, Symbol, MagicK);
   // 
-  puts("MagicK Version 0.0.0.0.1");
+  puts("MagicK Version 0.0.0.0.5");
   puts("Press Ctrl+c to Exit\n");
 
   while(1) {
@@ -86,6 +93,6 @@ int main(int argc, char** argv) {
   }
 	
 	//FREE THE HEAP AND REMOVE THE PARCER
-	mpc_cleanup(5, Int, Double, Sexpr, Expr, MagicK);
+	mpc_cleanup(6, Int, Double, Sexpr, Qexpr, Expr, MagicK);
   return 0;
 }

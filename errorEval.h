@@ -34,7 +34,7 @@ lval* lval_err(char* m);
 lval* lval_sym(char* m);
 lval* lval_read_num(mpc_ast_t* t);
 lval* lval_read(mpc_ast_t* t);
-
+lval* lval_qexpr(void);	
 lval* lval_add(lval* v, lval* x);
 
 //Display error to console
@@ -54,8 +54,17 @@ lval* lval_pop(lval* v, int i);
 lval* builtin_op(lval* a, char* op);
 lval* lval_take(lval* v, int i);
 
-//
+//POP HEAD TAIL JOIN
 
+lval* builtin_head(lval* a);
+lval* builtin_tail(lval* a);
+
+//Q-EXPRESSION
+lval* builtin_list(lval* a); 
+lval* builtin_eval(lval* a);
+lval* builtin_join(lval* a);
+lval* lval_join(lval* x, lval* y);
+lval* builtin(lval* a, char* func);
 #ifdef __cplusplus
 }
 #endif
