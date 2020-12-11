@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
 	double	 :	/-?[0-9]+\\.[0-9]+/;   			  		 	 	  						 \
     int      : /-?[0-9]+/;             					 	 							 \
 	sexpr    : '(' <expr>* ')';															 \
-	qexpr    : '{' <expr>* '}';															 \
+	qexpr    : '{' <expr>* '}';																 \
 	symbol   : \"list\" | \"head\" | \"tail\" | \"join\" | \"eval\" 			         \
 			 | '+' | '-'  | '*' | '/' | '%' 											 \
 			 | \"add\" | \"sub\" | \"mul\" | \"mod\";                  				     \
