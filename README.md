@@ -1,14 +1,14 @@
 # MagicK
 
 
-#instruction:
+# instruction:
 
 
-###Depend on architect system. You might need to run cc or gcc to compile
+### Depend on architect system. You might need to run cc or gcc to compile
 
 
 
-##WINDOW
+## WINDOW
 
 To compile the code you need to install MINGW
 
@@ -16,14 +16,14 @@ http://www.mingw.org/
 
  pick at least mingw32-base and msys-base
  
- Then foolow this instruction:
+ Then follow this instruction:
  
  https://www.computerhope.com/issues/ch000549.htm
 
 
 
 
-##LINUX and MAC
+## LINUX and MAC
 
 
 1. Install editline library
@@ -54,41 +54,54 @@ run this command for linking
 gcc -std=c99 -Wall prompt_mac_linux.c -ledit -o prompt_mac_linux
 
 
------------
-
-For class:
-
-The language program using disjunction to create parser for the noun and adjection. Later, it use conjunction rule to joined the adjective and noun together to make a phrase.
+----------
 
 
 
-#How to run the executable file
+# How to run the executable file
 
 PREFERRED WINDOW 
 
 1. OPEN your CMD 
-2. NAVIGATE TO THE FILE DIRECtorY
+2. NAVIGATE TO THE FILE DIRECTORY
 3. type "parse.exe"
 
 Example usage:
 
-Acceptable symbol you can use:
-list, head, tail, join, eval		         
-+ ,-,*,/,% 											 
-add, sub,mul,mod    
+|Symbol|
+|---------|
+|list, head, tail, join, eval|		         
+|+ ,-,*,/,% | 											 
+|add, sub,mul,mod|  
          
 		 
-list 1 2 3 4 <=> This would create a list {1 2 3 4}
-eval {head (list 1 2 3 4)} <=> Grab the first index in the list
-eval (tail {tail tail {5 6 7}}) <=> remove first index return last two index in the list
-head {1, 2 ,3} <=> return the head
-tail {1, 2 ,3 } <=> return last 2 index, {2,3}
-tail (tail {1, 2 ,3} <=> return last index, {3}
-+ 1 2 3 <=> 1 + 2 + 3
-+ 1 (* 7 5) 3 = 1 + (7*5) + 3
-eval (head {(+ 1 2) (+ 10 20)}) <=> grab the first list perform calculation
-eval (tail {(+ 1 2) (+ 10 20)}) <=> grab the last list perform calculation
+`list 1 2 3 4`<=> This would create a list {1 2 3 4}
 
-Language format
+`eval {head (list 1 2 3 4)}` <=> Grab the first index in the list
 
-<symbol> <expr> ()
+`eval (tail {tail tail {5 6 7}})` <=> remove first index return last two index in the list
+
+`head {1, 2 ,3}` <=> return the head
+
+`tail {1, 2 ,3 }`<=> return last 2 index, {2,3}
+
+`tail (tail {1, 2 ,3})` <=> return last index, {3}
+
+`+ 1 2 3` <=> 1 + 2 + 3
+
+`+ 1 (\* 7 5) 3` <=> 1 + (7*5) + 3
+
+`eval (head {(+ 1 2) (+ 10 20)})` <=> grab the first list perform calculation
+
+`eval (tail {(+ 1 2) (+ 10 20)})` <=> grab the last list perform calculation
+
+`join (list 1 2 3 4) (list 2 3 4)` <=> Join two list together
+INPUT FORMAT:
+
+`<symbol> (<symbol> <double> | <int> )$ <double> <int> ` **$** means optional, **|** or means you can enter either a float or integer value
+
+SPECIAL THANKS TO DANIEL HOLDEN for create awesome parser combination tool
+
+https://github.com/orangeduck/mpc/commits
+
+
